@@ -42,10 +42,10 @@ import SellerProfile from "./Pages/SellerProfile";
 // ADMIN
 // =========================================
 
-import AdminDashboard from "./pages/AdminDashboard";
-import AdminUsers from "./pages/AdminUsers";
-import AdminProperties from "./pages/AdminProperties";
-import AdminUserDetails from "./pages/AdminUserDetails";
+import AdminDashboard from "./Pages/AdminDashboard";
+import AdminUsers from "./Pages/AdminUsers";
+import AdminProperties from "./Pages/AdminProperties";
+import AdminUserDetails from "./Pages/AdminUserDetails";
 
 import PaymentPage from "./Pages/PaymentPage";
 import PaymentResult from "./Pages/PaymentResult";
