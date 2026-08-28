@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --ink:   #1b1d1f;
+  --paper: #f7f5f0;
+  --clay:  #bd6a45;
+  --moss:  #5d6b54;
+  --line:  rgba(27, 29, 31, 0.14);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── card shell ────────────────────────────────── */
+.property-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;          /* hard cap — card never bloats */
+  transition: box-shadow .22s, transform .2s;
+  cursor: pointer;
+}
+
+.property-card:hover {
+  box-shadow: 0 16px 40px -12px rgba(27, 29, 31, 0.18);
+  transform: translateY(-4px);
+}
+
+/* ─── image block ───────────────────────────────── */
+.property-card-img-wrap {
+  position: relative;
+  height: 160px;             /* fixed — always fully visible */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.property-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.property-card:hover .property-card-img {
+  transform: scale(1.06);
+}
+
+/* badge */
+.property-card-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(27, 29, 31, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ─── card body ─────────────────────────────────── */
+.property-card-body {
+  padding: 13px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.property-card-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.property-card-location {
+  font-size: 12px;
+  color: #8a8a83;
+  margin: 0 0 8px;
+}
+
+/* ─── meta row ──────────────────────────────────── */
+.property-card-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2px;
+}
+
+.property-card-meta span {
+  font-size: 11px;
+  color: #7b7a74;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+/* ─── footer ────────────────────────────────────── */
+.property-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.property-card-price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ─── button ────────────────────────────────────── */
+.details-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--ink);
+  border: none;
+  border-radius: 999px;
+  padding: 7px 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity .2s, transform .15s;
+}
+.details-btn:hover  { opacity: 0.82; }
+.details-btn:active { transform: scale(0.97); }

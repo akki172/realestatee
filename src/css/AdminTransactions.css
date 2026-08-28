@@ -1,0 +1,134 @@
+.admin-transactions {
+    padding: 30px;
+    min-height: 100vh;
+    background: #f7f7f7;
+}
+
+.transactions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.transactions-header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #111;
+}
+
+.transactions-header p {
+    margin-top: 8px;
+    color: #666;
+}
+
+.transaction-count {
+    background: #111;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.transactions-table-wrapper {
+    background: white;
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1100px;
+}
+
+.transactions-table th {
+    background: #111;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.transactions-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.property-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+}
+
+.property-cell img,
+.property-placeholder {
+    width: 55px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.property-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    font-size: 20px;
+}
+
+.amount {
+    font-weight: 700;
+}
+
+.payment-status,
+.property-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.payment-status.success {
+    background: #e8f7ed;
+    color: #187a3d;
+}
+
+.payment-status.pending {
+    background: #fff4d6;
+    color: #8a6200;
+}
+
+.payment-status.failed {
+    background: #fde8e8;
+    color: #b42318;
+}
+
+.property-status.sold {
+    background: #111;
+    color: white;
+}
+
+.property-status.booked {
+    background: #fff0d9;
+    color: #8a5500;
+}
+
+.payment-id {
+    font-size: 12px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-transactions-loading,
+.admin-transactions-error,
+.no-transactions {
+    padding: 50px;
+    text-align: center;
+    font-size: 16px;
+}

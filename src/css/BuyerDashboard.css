@@ -1,0 +1,68 @@
+.buyer-dashboard {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.buyer-header {
+    margin-bottom: 35px;
+}
+
+.buyer-header h1 {
+    margin-bottom: 8px;
+}
+
+.buyer-header p {
+    color: #666;
+}
+
+.buyer-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.buyer-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.buyer-card:hover {
+    transform: translateY(-5px);
+}
+
+.buyer-card h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.buyer-card h3 {
+    margin-bottom: 10px;
+}
+
+.buyer-card p {
+    color: #666;
+}
+
+@media (max-width: 900px) {
+
+    .buyer-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .buyer-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .buyer-dashboard {
+        padding: 20px;
+    }
+}

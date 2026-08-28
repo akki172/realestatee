@@ -1,0 +1,407 @@
+/* =========================================
+   PROPERTY COMMENTS
+========================================= */
+
+.property-comments {
+    margin-top: 30px;
+    padding: 30px;
+
+    background: #f7f5f0;
+
+    border: 1px solid #e1ded8;
+    border-radius: 16px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.comments-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+
+.comments-eyebrow {
+    margin: 0 0 7px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2.4px;
+
+    color: #8b8780;
+}
+
+
+.comments-header h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    color: #55514c;
+}
+
+
+.comments-header > span {
+    padding: 7px 12px;
+
+    border: 1px solid #ddd9d2;
+    border-radius: 20px;
+
+    background: #fff;
+
+    color: #77726b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   COMMENT FORM
+========================================= */
+
+.comment-form {
+    padding: 20px;
+
+    background: #fff;
+
+    border: 1px solid #ddd9d2;
+    border-radius: 11px;
+}
+
+
+.comment-form textarea {
+    width: 100%;
+
+    min-height: 105px;
+
+    box-sizing: border-box;
+
+    padding: 13px;
+
+    resize: vertical;
+
+    border: 1px solid #d7d3cc;
+    border-radius: 8px;
+
+    background: #faf9f6;
+
+    color: #55514c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    outline: none;
+}
+
+
+.comment-form textarea:focus {
+    border-color: #aaa59e;
+
+    background: #fff;
+}
+
+
+.comment-form textarea::placeholder {
+    color: #aaa59e;
+}
+
+
+.comment-form-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 10px;
+}
+
+
+.comment-form-bottom small {
+    color: #9b9690;
+
+    font-size: 11px;
+}
+
+
+.comment-form-bottom button {
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #62605b;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.comment-form-bottom button:hover {
+    background: #4f4d49;
+}
+
+
+.comment-form-bottom button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   COMMENTS LIST
+========================================= */
+
+.comments-list {
+    margin-top: 20px;
+}
+
+
+.comment-card {
+    margin-bottom: 12px;
+
+    padding: 20px;
+
+    background: #fff;
+
+    border: 1px solid #e1ded8;
+
+    border-radius: 11px;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.comment-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.comment-avatar {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #77736d;
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.comment-user strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #55514c;
+
+    font-size: 13px;
+}
+
+
+.comment-user small {
+    display: block;
+
+    color: #99958f;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   COMMENT TEXT
+========================================= */
+
+.comment-text {
+    margin: 15px 0 0;
+
+    color: #66625c;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SELLER REPLY
+========================================= */
+
+.seller-reply {
+    margin-top: 16px;
+
+    padding: 15px 17px;
+
+    border-left: 3px solid #77736d;
+
+    border-radius: 0 8px 8px 0;
+
+    background: #f5f3ef;
+}
+
+
+.seller-reply-title {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+}
+
+
+.seller-reply-title span {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: #68645e;
+}
+
+
+.seller-reply-title small {
+    color: #99958f;
+
+    font-size: 10px;
+}
+
+
+.seller-reply p {
+    margin: 0;
+
+    color: #66625c;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   EMPTY / LOADING
+========================================= */
+
+.comments-empty {
+    padding: 30px;
+
+    text-align: center;
+
+    color: #85817b;
+}
+
+
+.comments-empty div {
+    margin-bottom: 8px;
+
+    font-size: 25px;
+}
+
+
+.comments-empty p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+.comments-empty small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #a09b94;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .property-comments {
+        padding: 22px;
+    }
+
+
+    .comments-header {
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .comments-header h2 {
+        font-size: 24px;
+    }
+
+
+    .comment-form {
+        padding: 16px;
+    }
+
+
+    .comment-form-bottom {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .comment-form-bottom button {
+        width: 100%;
+    }
+
+
+    .seller-reply-title {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+}

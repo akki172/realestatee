@@ -1,0 +1,214 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500&family=Inter:wght@400;500;600&display=swap'
+);
+
+.buyer-preferences {
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 35px auto;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(27, 29, 31, 0.12);
+
+    border-radius: 14px;
+
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* HEADER */
+
+.buyer-preferences-header {
+
+    margin-bottom: 25px;
+}
+
+.buyer-preferences-header span {
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    color: #5d6b54;
+}
+
+.buyer-preferences-header h2 {
+
+    margin: 7px 0;
+
+    font-family: 'Fraunces', serif;
+
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.buyer-preferences-header p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #77766f;
+}
+
+
+/* FORM */
+
+.buyer-preferences-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* FIELD */
+
+.preference-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.preference-field label {
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.07em;
+
+    color: #77766f;
+}
+
+.preference-field input,
+.preference-field select {
+
+    width: 100%;
+
+    height: 43px;
+
+    padding: 0 12px;
+
+    border: 1px solid rgba(27, 29, 31, 0.14);
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+
+    color: #1b1d1f;
+
+    outline: none;
+}
+
+.preference-field input:focus,
+.preference-field select:focus {
+
+    border-color: #1b1d1f;
+}
+
+
+/* BUDGET ROW */
+
+.preference-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* BUTTON */
+
+.save-preferences-btn {
+
+    width: 100%;
+
+    height: 45px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1b1d1f;
+
+    color: white;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.save-preferences-btn:hover {
+
+    opacity: 0.85;
+}
+
+.save-preferences-btn:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* MESSAGE */
+
+.preference-message {
+
+    margin: 0;
+
+    padding: 10px 12px;
+
+    border-radius: 7px;
+
+    background: #f2f5f0;
+
+    color: #4d5d47;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .buyer-preferences {
+
+        margin: 20px 15px;
+
+        padding: 22px;
+    }
+
+    .preference-row {
+
+        grid-template-columns: 1fr;
+    }
+
+}

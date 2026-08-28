@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap');
+
+
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+
+    --ink: #1b1d1f;
+
+    --paper: #f7f5f0;
+
+    --clay: #bd6a45;
+
+    --moss: #5d6b54;
+
+    --line: rgba(27, 29, 31, 0.14);
+}
+
+
+/* =========================================
+   SELLER NAVBAR
+========================================= */
+
+.seller-navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    height: 64px;
+
+    padding: 0 48px;
+
+    box-sizing: border-box;
+
+    background: var(--paper);
+
+    border-bottom: 1px solid var(--line);
+
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.navbar-brand {
+
+    font-family: 'Fraunces', serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.03em;
+
+    color: var(--ink);
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+.navbar-brand b {
+
+    font-weight: 500;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   LINKS ROW
+========================================= */
+
+.navbar-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.seller-nav-link {
+
+    position: relative;
+
+    font-size: 13.5px;
+
+    font-weight: 500;
+
+    color: #7b7a74;
+
+    text-decoration: none;
+
+    letter-spacing: 0.01em;
+
+    padding: 4px 2px;
+
+    transition: color 0.2s;
+}
+
+
+.seller-nav-link::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -4px;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: var(--ink);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.2s ease;
+}
+
+
+.seller-nav-link:hover {
+
+    color: var(--ink);
+}
+
+
+.seller-nav-link:hover::after {
+
+    transform: scaleX(1);
+}
+
+
+.seller-nav-link.active {
+
+    color: var(--ink);
+}
+
+
+.seller-nav-link.active::after {
+
+    transform: scaleX(1);
+}
+
+
+/* =========================================
+   BOOKINGS & PAYMENTS
+========================================= */
+
+.navbar-links > button.bookings-nav-btn {
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13.5px;
+
+    font-weight: 500;
+
+    color: #7b7a74;
+
+    background: transparent;
+
+    border: none;
+
+    padding: 4px 2px;
+
+    cursor: pointer;
+
+    letter-spacing: 0.01em;
+
+    position: relative;
+
+    transition: color 0.2s;
+
+    white-space: nowrap;
+}
+
+
+.navbar-links > button.bookings-nav-btn::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -4px;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: var(--ink);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.2s ease;
+}
+
+
+.navbar-links > button.bookings-nav-btn:hover {
+
+    color: var(--ink);
+}
+
+
+.navbar-links > button.bookings-nav-btn:hover::after {
+
+    transform: scaleX(1);
+}
+
+
+/* =========================================
+   ADD PROPERTY
+========================================= */
+
+.seller-add-button {
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: #fff;
+
+    background: var(--ink);
+
+    border: none;
+
+    border-radius: 999px;
+
+    padding: 8px 18px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    margin-left: 4px;
+
+    transition:
+        opacity 0.2s,
+        transform 0.15s;
+}
+
+
+.seller-add-button:hover {
+
+    opacity: 0.86;
+}
+
+
+.seller-add-button:active {
+
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.seller-profile-button {
+
+    font-size: 16px;
+
+    background: rgba(27, 29, 31, 0.06);
+
+    border: none;
+
+    border-radius: 50%;
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    margin-left: 2px;
+
+    transition:
+        background 0.2s,
+        transform 0.15s;
+}
+
+
+.seller-profile-button:hover {
+
+    background: rgba(27, 29, 31, 0.12);
+}
+
+
+.seller-profile-button:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-button {
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: var(--clay);
+
+    background: transparent;
+
+    border: 1px solid rgba(189, 106, 69, 0.35);
+
+    border-radius: 999px;
+
+    padding: 7px 18px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    margin-left: 2px;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        transform 0.15s;
+}
+
+
+.logout-button:hover {
+
+    background: rgba(189, 106, 69, 0.08);
+
+    border-color: var(--clay);
+}
+
+
+.logout-button:active {
+
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   NOTIFICATION WRAPPER
+========================================= */
+
+.notification-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   NOTIFICATION BELL
+========================================= */
+
+.notification-bell {
+
+    position: relative;
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: none !important;
+
+    border-radius: 50% !important;
+
+    background: transparent !important;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    color: var(--ink);
+
+    transition: background 0.2s !important;
+}
+
+
+.notification-bell:hover {
+
+    background: rgba(27, 29, 31, 0.06) !important;
+}
+
+
+/* =========================================
+   NOTIFICATION BADGE
+========================================= */
+
+.notification-badge {
+
+    position: absolute;
+
+    top: -2px;
+
+    right: -2px;
+
+    min-width: 18px;
+
+    height: 18px;
+
+    padding: 0 4px;
+
+    box-sizing: border-box;
+
+    border-radius: 20px;
+
+    background: #d32f2f;
+
+    color: #fff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   NOTIFICATION DROPDOWN
+========================================= */
+
+.notification-dropdown {
+
+    position: absolute;
+
+    top: 48px;
+
+    right: 0;
+
+    width: 360px;
+
+    max-height: 450px;
+
+    background: #fff;
+
+    border: 1px solid var(--line);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.10);
+
+    overflow: hidden;
+
+    z-index: 2000;
+}
+
+
+/* =========================================
+   NOTIFICATION HEADER
+========================================= */
+
+.notification-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 14px 18px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.notification-header strong {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--ink);
+}
+
+
+.notification-header button {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: var(--clay);
+
+    transition: opacity 0.2s;
+}
+
+
+.notification-header button:hover {
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   NOTIFICATION LIST
+========================================= */
+
+.notification-list {
+
+    max-height: 390px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================
+   NOTIFICATION ITEM
+========================================= */
+
+.notification-item {
+
+    display: flex;
+
+    gap: 12px;
+
+    padding: 13px 16px;
+
+    cursor: pointer;
+
+    border-bottom:
+        1px solid rgba(27, 29, 31, 0.06);
+
+    transition: background 0.15s;
+}
+
+
+.notification-item:hover {
+
+    background: #f8f7f3;
+}
+
+
+.notification-item.unread {
+
+    background: #f0f4fa;
+}
+
+
+/* =========================================
+   NOTIFICATION CONTENT
+========================================= */
+
+.notification-icon {
+
+    font-size: 20px;
+}
+
+
+.notification-content {
+
+    flex: 1;
+}
+
+
+.notification-content p {
+
+    margin: 0 0 4px;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    color: var(--ink);
+}
+
+
+.notification-content small {
+
+    color: #8a8a83;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   EMPTY NOTIFICATIONS
+========================================= */
+
+.notification-empty {
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    color: #8a8a83;
+}
+
+
+.notification-empty span {
+
+    font-size: 28px;
+}
+
+
+.notification-empty p {
+
+    margin: 8px 0 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE - 1100px
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .seller-navbar {
+
+        padding: 0 28px;
+    }
+
+
+    .navbar-links {
+
+        gap: 12px;
+    }
+
+
+    .seller-nav-link {
+
+        font-size: 12.5px;
+    }
+
+
+    .navbar-links > button.bookings-nav-btn {
+
+        font-size: 12.5px;
+    }
+
+
+    .seller-add-button {
+
+        padding: 8px 14px;
+    }
+
+
+    .logout-button {
+
+        padding: 7px 14px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - 860px
+========================================= */
+
+@media (max-width: 860px) {
+
+    .seller-navbar {
+
+        height: auto;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 14px 22px 16px;
+
+        gap: 14px;
+    }
+
+
+    .navbar-links {
+
+        width: 100%;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+
+    .notification-dropdown {
+
+        right: -80px;
+
+        width: 310px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - 500px
+========================================= */
+
+@media (max-width: 500px) {
+
+    .seller-navbar {
+
+        padding: 14px 16px;
+    }
+
+
+    .navbar-links {
+
+        gap: 8px;
+    }
+
+
+    .seller-nav-link {
+
+        font-size: 12px;
+    }
+
+
+    .navbar-links > button.bookings-nav-btn {
+
+        font-size: 12px;
+    }
+
+
+    .seller-add-button {
+
+        font-size: 12px;
+
+        padding: 7px 13px;
+    }
+
+
+    .logout-button {
+
+        font-size: 12px;
+
+        padding: 6px 13px;
+    }
+
+
+    .notification-dropdown {
+
+        right: -100px;
+
+        width: 290px;
+    }
+}

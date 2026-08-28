@@ -1,0 +1,76 @@
+.admin-analytics-page {
+    min-height: 100vh;
+    background: #f7f7f7;
+}
+
+.admin-analytics {
+    padding: 35px;
+}
+
+.analytics-header {
+    margin-bottom: 35px;
+}
+
+.analytics-header h1 {
+    margin: 5px 0;
+    font-size: 32px;
+}
+
+.analytics-header p {
+    color: #666;
+}
+
+.analytics-section-title {
+    margin: 30px 0 18px;
+    font-size: 21px;
+}
+
+.analytics-cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.analytics-card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.analytics-card span {
+    display: block;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.analytics-card strong {
+    display: block;
+    font-size: 28px;
+    color: #111;
+}
+
+.analytics-coming-soon {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.analytics-coming-soon h3 {
+    margin-top: 0;
+}
+
+.analytics-coming-soon p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.admin-analytics-loading {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

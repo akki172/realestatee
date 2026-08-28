@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+    --paper:#f7f5f0;
+    --ink:#1b1d1f;
+    --clay:#bd6a45;
+    --moss:#5d6b54;
+    --line:rgba(27,29,31,.12);
+}
+
+body{
+    background:var(--paper);
+}
+
+.visit-container{
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    padding:20px;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+.visit-container h1{
+
+    font-family:'Fraunces',serif;
+
+    font-size:38px;
+
+    font-weight:500;
+
+    color:var(--ink);
+
+    margin-bottom:30px;
+
+}
+
+.empty{
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:#777;
+
+    margin-top:80px;
+
+}
+
+.visit-card{
+
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.visit-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.visit-card h2{
+
+    font-family:'Fraunces',serif;
+
+    color:var(--clay);
+
+    margin-bottom:18px;
+
+}
+
+.visit-card p{
+
+    margin:10px 0;
+
+    color:#444;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+.visit-card strong{
+
+    color:var(--ink);
+
+}
+
+.visit-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.approve-btn{
+
+    background:var(--moss);
+
+    color:white;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.approve-btn:hover{
+
+    opacity:.9;
+
+    transform:translateY(-2px);
+
+}
+
+.reject-btn{
+
+    background:#d9534f;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.reject-btn:hover{
+
+    opacity:.9;
+
+    transform:translateY(-2px);
+
+}
+
+@media(max-width:768px){
+
+    .visit-container{
+
+        padding:15px;
+
+    }
+
+    .visit-card{
+
+        padding:20px;
+
+    }
+
+    .visit-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .approve-btn,
+    .reject-btn{
+
+        width:100%;
+
+    }
+
+}

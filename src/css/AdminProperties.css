@@ -1,0 +1,442 @@
+/* =========================================
+   ADMIN PROPERTIES PAGE
+========================================= */
+
+.admin-properties-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 55px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-properties-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.admin-properties-header h1 {
+    margin: 8px 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    font-weight: 500;
+
+    color: #17191c;
+}
+
+.admin-properties-header p {
+    margin: 0;
+
+    color: #707070;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   PROPERTIES COUNT
+========================================= */
+
+.properties-count {
+    background: #ffffff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 25px;
+
+    padding: 10px 18px;
+
+    font-size: 14px;
+
+    color: #444;
+}
+
+
+/* =========================================
+   PROPERTY GRID
+========================================= */
+
+.admin-property-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   PROPERTY CARD
+========================================= */
+
+.admin-property-card {
+    background: #ffffff;
+
+    border: 1px solid #e3e0da;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-property-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(27, 29, 31, 0.08);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.admin-property-image {
+    position: relative;
+
+    height: 220px;
+}
+
+.admin-property-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.property-status {
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.property-status.available {
+    color: #26734d;
+}
+
+.property-status.booked {
+    color: #a36a00;
+}
+
+.property-status.rented {
+    color: #5c4b9e;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.admin-property-content {
+    padding: 22px;
+}
+
+.admin-property-content h2 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    color: #17191c;
+}
+
+.admin-property-location {
+    margin: 8px 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.admin-property-price {
+    margin-top: 15px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #17191c;
+}
+
+
+/* =========================================
+   PROPERTY DETAILS
+========================================= */
+
+.admin-property-details {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.admin-property-details span {
+    padding: 6px 10px;
+
+    background: #f3f1ed;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    color: #555;
+}
+
+
+/* =========================================
+   SELLER
+========================================= */
+
+.admin-property-seller {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+}
+
+.admin-property-seller span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.admin-property-seller strong {
+    font-size: 13px;
+
+    color: #17191c;
+}
+
+
+/* =========================================
+   VIEW PROPERTY BUTTON
+========================================= */
+
+.admin-view-property-btn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #17191c;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.admin-view-property-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   EMPTY / LOADING
+========================================= */
+
+.no-properties,
+.admin-properties-loading {
+    min-height: 250px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .admin-properties-page {
+        padding: 40px 30px;
+    }
+
+    .admin-property-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .admin-properties-page {
+        padding: 30px 15px;
+    }
+
+    .admin-property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-properties-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .admin-properties-header h1 {
+        font-size: 34px;
+    }
+
+}
+/* =========================================
+   VERIFIED BADGE
+========================================= */
+
+.admin-verified-badge {
+    position: absolute;
+
+    left: 15px;
+    top: 15px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    color: #1769aa;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   VERIFY BUTTON
+========================================= */
+
+.admin-verify-property-btn,
+.admin-unverify-property-btn,
+.admin-delete-property-btn {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 11px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+/* VERIFY */
+
+.admin-verify-property-btn {
+    border: 1px solid #1769aa;
+
+    background: #1769aa;
+
+    color: #ffffff;
+}
+
+
+/* UNVERIFY */
+
+.admin-unverify-property-btn {
+    border: 1px solid #aaa;
+
+    background: #ffffff;
+
+    color: #555;
+}
+
+
+/* DELETE */
+
+.admin-delete-property-btn {
+    border: 1px solid #d32f2f;
+
+    background: #ffffff;
+
+    color: #d32f2f;
+}
+
+
+.admin-verify-property-btn:hover,
+.admin-unverify-property-btn:hover,
+.admin-delete-property-btn:hover {
+    opacity: 0.85;
+}
+
+
+.admin-verify-property-btn:active,
+.admin-unverify-property-btn:active,
+.admin-delete-property-btn:active {
+    transform: scale(0.98);
+}

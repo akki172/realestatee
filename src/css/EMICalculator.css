@@ -1,0 +1,587 @@
+/* =========================================
+   PROPERTY CALCULATOR
+========================================= */
+
+.emi-container {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 30px;
+
+    background: #f7f5f0;
+
+    border: 1px solid #e1ded8;
+    border-radius: 16px;
+
+    color: #55524e;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.emi-header {
+    margin-bottom: 26px;
+}
+
+
+.emi-eyebrow {
+    margin: 0 0 7px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    color: #85817b;
+}
+
+
+.emi-header h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 400;
+
+    color: #55524e;
+}
+
+
+.emi-header p:last-child {
+    margin: 9px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    color: #85817b;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.emi-form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   FIELD
+========================================= */
+
+.emi-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.emi-field label {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #66625d;
+}
+
+
+.emi-field input,
+.emi-field select,
+.emi-readonly {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    min-height: 46px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d7d3cc;
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: #55524e;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.emi-field input::placeholder {
+    color: #aaa6a0;
+}
+
+
+.emi-field input:focus,
+.emi-field select:focus {
+
+    border-color: #aaa59e;
+
+    box-shadow:
+        0 0 0 3px rgba(120, 116, 110, 0.08);
+}
+
+
+.emi-readonly {
+    display: flex;
+
+    align-items: center;
+
+    background: #eeece7;
+
+    color: #66625d;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   CALCULATE BUTTON
+========================================= */
+
+.emi-calculate-btn {
+
+    grid-column: 1 / -1;
+
+    min-height: 46px;
+
+    margin-top: 4px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #5f5c57;
+
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.emi-calculate-btn:hover {
+    background: #4e4b47;
+
+    transform: translateY(-1px);
+}
+
+
+.emi-calculate-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   RESULT SECTION
+========================================= */
+
+.emi-result {
+
+    margin-top: 26px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #dedbd5;
+}
+
+
+/* =========================================
+   MAIN RESULT
+========================================= */
+
+.emi-main-result {
+
+    padding: 22px;
+
+    border: 1px solid #dedbd5;
+    border-radius: 12px;
+
+    background: #eeece7;
+
+    text-align: center;
+}
+
+
+.emi-main-result span {
+
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    color: #85817b;
+}
+
+
+.emi-main-result strong {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+    font-weight: 400;
+
+    color: #55524e;
+}
+
+
+/* =========================================
+   RESULT GRID
+========================================= */
+
+.emi-result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+
+.emi-result-grid > div {
+
+    padding: 16px;
+
+    border: 1px solid #dedbd5;
+    border-radius: 10px;
+
+    background: #fff;
+}
+
+
+.emi-result-grid span {
+
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    color: #85817b;
+}
+
+
+.emi-result-grid strong {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #5a5752;
+}
+
+
+/* =========================================
+   RENT TABLE
+========================================= */
+
+.rent-table {
+
+    margin-top: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #dedbd5;
+    border-radius: 10px;
+
+    background: #fff;
+}
+
+
+.rent-table-header,
+.rent-table-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.5fr 1.5fr;
+
+    align-items: center;
+}
+
+
+.rent-table-header {
+
+    padding: 13px 16px;
+
+    background: #e9e6e0;
+
+    color: #66625d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.rent-table-row {
+
+    padding: 14px 16px;
+
+    border-top: 1px solid #ece9e3;
+
+    color: #68645f;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+
+.rent-table-row:hover {
+    background: #faf9f6;
+}
+
+
+.rent-table-row span:nth-child(2),
+.rent-table-row span:nth-child(3) {
+
+    text-align: right;
+
+}
+
+
+.rent-table-header span:nth-child(2),
+.rent-table-header span:nth-child(3) {
+
+    text-align: right;
+
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.emi-modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(35, 34, 32, 0.48);
+
+    z-index: 9999;
+}
+
+
+.emi-modal {
+
+    position: relative;
+
+    width: min(850px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border-radius: 16px;
+
+    background: #f7f5f0;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+
+.emi-modal .emi-container {
+
+    border: none;
+
+    border-radius: 16px;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.emi-close-btn {
+
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+
+    z-index: 10;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ddd9d2;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: #6d6963;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.emi-close-btn:hover {
+
+    background: #ece9e3;
+
+    color: #44413d;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .emi-container {
+        padding: 22px;
+    }
+
+
+    .emi-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .emi-calculate-btn {
+
+        grid-column: 1;
+
+    }
+
+
+    .emi-result-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .emi-header h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .emi-main-result strong {
+
+        font-size: 28px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .emi-container {
+        padding: 18px;
+    }
+
+
+    .emi-result-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .rent-table-header,
+    .rent-table-row {
+
+        grid-template-columns:
+            0.8fr 1.2fr 1.2fr;
+
+        padding-left: 11px;
+        padding-right: 11px;
+
+    }
+
+
+    .rent-table-header {
+        font-size: 10px;
+    }
+
+
+    .rent-table-row {
+        font-size: 11px;
+    }
+
+
+    .emi-modal-overlay {
+        padding: 10px;
+    }
+
+
+    .emi-modal {
+        max-height: 95vh;
+    }
+
+}

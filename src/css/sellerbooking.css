@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --ink:   #1b1d1f;
+  --paper: #f7f5f0;
+  --clay:  #bd6a45;
+  --moss:  #5d6b54;
+  --sky-deep: #3d6c93;
+  --line:  rgba(27, 29, 31, 0.14);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── loading / error ───────────────────────────── */
+.seller-bookings-loading,
+.seller-bookings-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #7b7a74;
+  background: var(--paper);
+}
+
+.seller-bookings-error { color: var(--clay); }
+
+/* ─── page ──────────────────────────────────────── */
+.seller-bookings-page {
+  min-height: 100vh;
+  background: var(--paper);
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+}
+
+.seller-bookings-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 52px 40px 80px;
+}
+
+/* ─── back link ─────────────────────────────────── */
+.seller-bookings-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #8a8a83;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 28px;
+  font-family: 'Inter', sans-serif;
+  transition: color .2s;
+}
+.seller-bookings-back:hover { color: var(--ink); }
+
+/* ─── header ────────────────────────────────────── */
+.seller-bookings-header {
+  margin-bottom: 36px;
+}
+
+.seller-bookings-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 10px;
+}
+
+.seller-bookings-header h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.15;
+  color: var(--ink);
+  position: relative;
+  padding-bottom: 16px;
+  margin-bottom: 10px;
+}
+
+.seller-bookings-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 36px;
+  height: 1px;
+  background: var(--clay);
+}
+
+.seller-bookings-header > p {
+  font-size: 13.5px;
+  color: #8a8a83;
+  margin-top: 14px;
+}
+
+/* ─── empty state ───────────────────────────────── */
+.no-seller-bookings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.no-seller-bookings h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 22px;
+  color: #7b7a74;
+}
+
+.no-seller-bookings p {
+  font-size: 13.5px;
+  color: #8a8a83;
+  max-width: 300px;
+}
+
+/* ─── list ──────────────────────────────────────── */
+.seller-bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ─── booking card ──────────────────────────────── */
+.seller-booking-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  align-items: stretch;
+  transition: box-shadow .22s, transform .2s;
+}
+
+.seller-booking-card:hover {
+  box-shadow: 0 12px 36px -12px rgba(27, 29, 31, 0.14);
+  transform: translateY(-2px);
+}
+
+/* ─── image col ─────────────────────────────────── */
+.seller-booking-image {
+  height: 100%;
+  min-height: 160px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.seller-booking-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.seller-booking-card:hover .seller-booking-image img {
+  transform: scale(1.04);
+}
+
+.no-property-image {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  background: linear-gradient(135deg, #d8e6ef, #eaf1f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #8a8a83;
+}
+
+/* ─── details col ───────────────────────────────── */
+.seller-booking-details {
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+
+.seller-booking-details h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.seller-booking-details p {
+  font-size: 13px;
+  color: #7b7a74;
+  line-height: 1.5;
+}
+
+.seller-booking-details p strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* payment / order IDs in mono */
+.seller-booking-details p:nth-child(4) strong,
+.seller-booking-details p:nth-child(5) strong {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ─── actions col ───────────────────────────────── */
+.seller-booking-actions {
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  border-left: 1px solid var(--line);
+  min-width: 160px;
+}
+
+/* payment success badge */
+.seller-payment-success {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--moss);
+  background: rgba(93, 107, 84, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* property status badge */
+.seller-property-booked {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sky-deep);
+  background: rgba(61, 108, 147, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.seller-property-sold {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay);
+  background: rgba(189, 106, 69, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* mark as sold button */
+.mark-sold-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--ink);
+  border: none;
+  border-radius: 999px;
+  padding: 9px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  transition: opacity .2s, transform .15s;
+}
+.mark-sold-btn:hover  { opacity: 0.82; }
+.mark-sold-btn:active { transform: scale(0.97); }
+
+/* ─── responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .seller-bookings-container { padding: 36px 22px 60px; }
+
+  .seller-booking-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px auto auto;
+  }
+
+  .seller-booking-image { min-height: 180px; }
+
+  .seller-booking-actions {
+    border-left: none;
+    border-top: 1px solid var(--line);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 14px 20px;
+  }
+}

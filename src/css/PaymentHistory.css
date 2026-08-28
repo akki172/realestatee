@@ -1,0 +1,441 @@
+/* =========================================
+   PAYMENT HISTORY PAGE
+========================================= */
+
+.payment-history-page {
+    min-height: 100vh;
+    background: #f7f5f0;
+    padding: 55px;
+    box-sizing: border-box;
+}
+
+.payment-history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.payment-history-header {
+    margin-bottom: 40px;
+}
+
+.payment-eyebrow {
+    margin: 0 0 8px;
+    color: #52666d;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.payment-history-header h1 {
+    margin: 8px 0;
+    color: #17191c;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.payment-history-header p:last-child {
+    margin: 0;
+    color: #707070;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   PAYMENT LIST
+========================================= */
+
+.payment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+/* =========================================
+   PAYMENT CARD
+========================================= */
+
+.payment-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e0da;
+    border-radius: 16px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.payment-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 28px rgba(27, 29, 31, 0.08);
+}
+
+
+/* =========================================
+   PROPERTY IMAGE
+========================================= */
+
+.payment-property-image {
+    width: 150px;
+    height: 105px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #f1eee8;
+}
+
+.payment-property-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.payment-card-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.payment-card-left h2 {
+    margin: 0 0 14px;
+
+    color: #17191c;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+}
+
+.payment-card-left p {
+    margin: 7px 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.payment-card-left strong {
+    margin-left: 5px;
+
+    color: #333;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.payment-card-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.payment-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 85px;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+.payment-success {
+    background: #e8f5ed;
+    color: #26734d;
+}
+
+.payment-pending {
+    background: #fff4dc;
+    color: #a36a00;
+}
+
+.payment-failed {
+    background: #fdeaea;
+    color: #a33a3a;
+}
+
+
+/* =========================================
+   VIEW RECEIPT BUTTON
+========================================= */
+
+.view-receipt-btn {
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #17191c;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.view-receipt-btn:hover {
+    background: #303338;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.no-payments {
+    padding: 80px 30px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e0da;
+
+    border-radius: 16px;
+}
+
+.no-payments h2 {
+    margin: 0 0 10px;
+
+    color: #17191c;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+}
+
+.no-payments p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.payment-history-loading {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f7f5f0;
+
+    color: #17191c;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .payment-history-page {
+        padding: 45px 30px;
+    }
+
+    .payment-card {
+        gap: 20px;
+    }
+
+    .payment-property-image {
+        width: 130px;
+        height: 95px;
+    }
+
+    .payment-card-right {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .payment-history-page {
+        padding: 35px 20px;
+    }
+
+    .payment-history-header {
+        margin-bottom: 30px;
+    }
+
+    .payment-history-header h1 {
+        font-size: 36px;
+    }
+
+    .payment-card {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 20px;
+    }
+
+    .payment-property-image {
+        width: 100%;
+        height: 210px;
+    }
+
+    .payment-card-left {
+        width: 100%;
+    }
+
+    .payment-card-right {
+        width: 100%;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+
+    .view-receipt-btn {
+        padding: 11px 16px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .payment-history-page {
+        padding: 25px 15px;
+    }
+
+    .payment-history-header h1 {
+        font-size: 32px;
+    }
+
+    .payment-card {
+        padding: 17px;
+    }
+
+    .payment-property-image {
+        height: 180px;
+    }
+
+    .payment-card-left h2 {
+        font-size: 20px;
+    }
+
+    .payment-card-right {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .payment-status {
+        width: fit-content;
+    }
+
+    .view-receipt-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   PRINT
+========================================= */
+
+@media print {
+
+    .payment-history-page {
+        padding: 0;
+        background: #ffffff;
+    }
+
+    .payment-card {
+        box-shadow: none;
+    }
+
+    .view-receipt-btn {
+        display: none;
+    }
+}

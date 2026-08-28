@@ -1,0 +1,149 @@
+/* =========================================
+   PAYMENT PAGE
+========================================= */
+
+.payment-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+
+    background: #f7f5f0;
+
+    color: #1b1d1f;
+
+    font-family: "Inter", sans-serif;
+}
+
+
+/* =========================================
+   PAYMENT CARD
+========================================= */
+
+.payment-page {
+    flex-direction: column;
+}
+
+.payment-page h1 {
+    margin: 0 0 25px;
+
+    font-family: "Fraunces", Georgia, serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* =========================================
+   PAYMENT BUTTON
+========================================= */
+
+.payment-page button {
+    min-width: 190px;
+
+    padding: 13px 24px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background: #1b1d1f;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.payment-page button:hover {
+    opacity: 0.9;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(27, 29, 31, 0.12);
+}
+
+.payment-page button:active {
+    transform: scale(0.97);
+}
+
+.payment-page button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.payment-error {
+    max-width: 420px;
+
+    margin: 0 0 20px;
+
+    padding: 12px 16px;
+
+    border: 1px solid rgba(180, 50, 50, 0.2);
+
+    border-radius: 10px;
+
+    background: #fff5f5;
+
+    color: #a83232;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .payment-page {
+        padding: 30px 20px;
+    }
+
+    .payment-page h1 {
+        font-size: 30px;
+
+        text-align: center;
+    }
+
+    .payment-page button {
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+}

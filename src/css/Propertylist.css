@@ -1,0 +1,826 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,0..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+
+:root {
+    --ink: #1b1d1f;
+    --paper: #f7f5f0;
+    --clay: #bd6a45;
+    --moss: #5d6b54;
+    --line: rgba(27, 29, 31, 0.14);
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.pl-page {
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+}
+
+
+.pl-main {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 45px 40px 70px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.pl-heading {
+    margin-bottom: 28px;
+}
+
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--moss);
+}
+
+
+.pl-heading h1 {
+    margin: 0;
+
+    font-family: 'Fraunces', serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.15;
+
+    color: var(--ink);
+}
+
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.search-bar {
+    display: flex;
+    align-items: flex-end;
+
+    gap: 18px;
+
+    width: 100%;
+
+    padding: 20px 22px;
+
+    margin-bottom: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    box-shadow: 0 6px 20px rgba(20, 30, 40, 0.05);
+
+    flex-wrap: wrap;
+}
+
+
+/* Search field */
+
+.search-field-wrap {
+    flex: 1;
+
+    min-width: 150px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.search-field-wrap label {
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #888780;
+}
+
+
+.search-field-wrap input,
+.search-field-wrap select {
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 10px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--line);
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+
+    color: var(--ink);
+}
+
+
+.search-field-wrap input:focus,
+.search-field-wrap select:focus {
+    border-color: var(--ink);
+}
+
+
+/* =========================================
+   SEARCH BUTTONS
+========================================= */
+
+.search-actions {
+    display: flex;
+
+    gap: 9px;
+
+    align-items: flex-end;
+}
+
+
+.btn-search,
+.btn-reset {
+    height: 42px;
+
+    padding: 0 20px;
+
+    border-radius: 8px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+.btn-search {
+    background: var(--ink);
+
+    color: white;
+
+    border: 1px solid var(--ink);
+}
+
+
+.btn-search:hover {
+    opacity: 0.85;
+}
+
+
+.btn-reset {
+    background: white;
+
+    color: var(--ink);
+
+    border: 1px solid var(--line);
+}
+
+
+.btn-reset:hover {
+    background: var(--paper);
+}
+
+
+/* =========================================
+   COUNT
+========================================= */
+
+.pl-count {
+    margin-bottom: 16px;
+
+    font-size: 12px;
+
+    color: #85847e;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+/*
+   Desktop = 3 cards
+*/
+
+.property-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   PROPERTY CARD
+========================================= */
+
+.property-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid var(--line);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.property-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(27, 29, 31, 0.13);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.property-card-img-wrap {
+    position: relative;
+
+    width: 100%;
+
+    height: 155px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+    background: #e8e6e1;
+}
+
+
+.property-card-img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+
+.property-card:hover .property-card-img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   PROPERTY TYPE BADGE
+========================================= */
+
+.property-card-type {
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    padding: 5px 9px;
+
+    background: rgba(27, 29, 31, 0.78);
+
+    color: #ffffff;
+
+    border-radius: 999px;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   CARD BODY
+========================================= */
+
+.property-card-body {
+    padding: 12px 14px 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+/* Title */
+
+.property-card-title {
+    margin: 0 0 5px;
+
+    font-family: 'Fraunces', serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.25;
+
+    color: var(--ink);
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* Location */
+
+.property-card-location {
+    margin: 0 0 10px;
+
+    font-size: 11px;
+
+    color: #85847e;
+}
+
+
+/* =========================================
+   PROPERTY META
+========================================= */
+
+.property-card-meta {
+    display: flex;
+
+    gap: 8px;
+
+    padding: 8px 0;
+
+    margin-bottom: 10px;
+
+    border-top: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+
+    flex-wrap: wrap;
+}
+
+
+.property-card-meta span {
+    font-size: 10.5px;
+
+    color: #70706b;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.property-card-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+    margin-top: auto;
+}
+
+
+/* Price */
+
+.property-card-price {
+    margin: 0;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: var(--ink);
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   VIEW DETAILS BUTTON
+========================================= */
+
+.details-btn {
+    padding: 7px 12px;
+
+    background: var(--ink);
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 999px;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+.details-btn:hover {
+    opacity: 0.82;
+}
+
+
+.details-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.pl-loading {
+    min-height: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    color: #77766f;
+
+    font-size: 13px;
+}
+
+
+.pl-spinner {
+    width: 30px;
+
+    height: 30px;
+
+    border: 2px solid var(--line);
+
+    border-top-color: var(--ink);
+
+    border-radius: 50%;
+
+    animation: spin 0.7s linear infinite;
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.pl-empty {
+    margin-top: 60px;
+
+    text-align: center;
+
+    font-family: 'Fraunces', serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    color: #77766f;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.pl-error {
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    background: rgba(189, 106, 69, 0.08);
+
+    color: var(--clay);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .pl-main {
+        padding: 40px 28px 60px;
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .pl-main {
+        padding: 32px 18px 50px;
+    }
+
+
+    .pl-heading h1 {
+        font-size: 30px;
+    }
+
+
+    .search-bar {
+        padding: 17px;
+
+        gap: 14px;
+    }
+
+
+    .search-field-wrap {
+        min-width: 100%;
+    }
+
+
+    .search-actions {
+        width: 100%;
+    }
+
+
+    .btn-search,
+    .btn-reset {
+        flex: 1;
+
+        text-align: center;
+    }
+
+
+    .property-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .property-card-img-wrap {
+        height: 200px;
+    }
+
+
+    .property-card-title {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .pl-main {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    .property-card-img-wrap {
+        height: 185px;
+    }
+
+
+    .property-card-body {
+        padding: 12px;
+    }
+
+
+    .property-card-footer {
+        flex-wrap: wrap;
+    }
+    .property-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* AVAILABLE */
+
+.property-status.available {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* RENTED */
+
+.property-status.rented {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+/* SOLD */
+
+.property-status.sold {
+    background: #ffebee;
+    color: #c62828;
+}
+
+}
+.property-card-img-wrap {
+    position: relative;
+}
+
+.verified-badge {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    padding: 6px 10px;
+
+    background: #ffffff;
+
+    color: #1769aa;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.12);
+
+    z-index: 5;
+}
+/* =========================================
+   SOLD PROPERTY IMAGE
+========================================= */
+
+.property-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.property-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Black & white when SOLD */
+
+.property-card-img-wrap.property-sold
+.property-card-img {
+    filter: grayscale(100%);
+}
+
+
+/* SOLD overlay */
+
+.sold-image-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    color: #ffffff;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    pointer-events: none;
+}
+.property-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.sold-property .property-card-img {
+    filter: grayscale(100%);
+}
+
+.sold-image-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    color: #fff;
+
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 5px;
+
+    pointer-events: none;
+}
