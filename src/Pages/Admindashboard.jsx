@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-import "../css/AdminDashboard.css";
+import "../css/Admindashboard.css";
 import AdminNavbar from "../components/AdminNavbar";
 
 
