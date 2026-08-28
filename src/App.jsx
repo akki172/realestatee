@@ -42,7 +42,7 @@ import SellerProfile from "./Pages/SellerProfile";
 // ADMIN
 // =========================================
 
-import AdminDashboard from "./Pages/AdminDashboard";
+import AdminDashboard from "./Pages/Admindashboard";
 import AdminUsers from "./Pages/AdminUsers";
 import AdminProperties from "./Pages/AdminProperties";
 import AdminUserDetails from "./Pages/AdminUserDetails";
