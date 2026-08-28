@@ -49,7 +49,7 @@ import AdminUserDetails from "./pages/AdminUserDetails";
 
 import PaymentPage from "./Pages/PaymentPage";
 import PaymentResult from "./Pages/PaymentResult";
-import PaymentHistory from "./pages/PaymentHistory";
+import PaymentHistory from "./Pages/PaymentHistory";
 import PaymentReceipt from "./Pages/PaymentRecipt";
 import SellerBookings from "./Pages/SellerBooking";
 import AdminTransactions from "./Pages/AdminTransactions";
