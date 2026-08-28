@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "../css/SellerNavbar.css";
+import "../css/sellernavbar.css";
 import NotificationBell from "./NotificationBell";
 
 function SellerNavbar() {

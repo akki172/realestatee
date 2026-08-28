@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 
-import {
-    getPropertyById,
-    updateProperty
-} from "../services/propertyService";
+import { getPropertyById, updateProperty } from "../services/PropertyService";
 
 import "../css/EditProperty.css";
 
