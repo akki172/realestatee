@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:8080/api/property";
+const API = "https://realestatee-backend.onrender.com/api/property";
 
 
 // Get authentication headers

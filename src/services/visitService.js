@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:8080/api/visit";
+const API = "https://realestatee-backend.onrender.com/api/visit";
 
 const getAuthHeaders = () => {
     const token = localStorage.getItem("token");

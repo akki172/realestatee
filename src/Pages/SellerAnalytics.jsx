@@ -90,7 +90,7 @@ function SellerAnalytics() {
 
             const response = await axios.get(
 
-                `http://localhost:8080/api/seller/dashboard/${sellerId}`,
+                `https://realestatee-backend.onrender.com/api/seller/dashboard/${sellerId}`,
 
                 {
                     headers: {

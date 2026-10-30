@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "../css/BuyerPreferences.css";
 
-const API = "http://localhost:8080/api/buyer-preference";
+const API = "https://realestatee-backend.onrender.com/api/buyer-preference";
 
 function BuyerPreferences() {
 

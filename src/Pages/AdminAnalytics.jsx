@@ -55,7 +55,7 @@ function AdminAnalytics() {
                 // =========================================
 
                 const response = await axios.get(
-                    "http://localhost:8080/api/admin/dashboard",
+                    "https://realestatee-backend.onrender.com/api/admin/dashboard",
                     {
                         headers: {
                             Authorization:
@@ -76,7 +76,7 @@ function AdminAnalytics() {
 
                 const activityResponse =
                     await axios.get(
-                        "http://localhost:8080/api/admin/analytics/activity",
+                        "https://realestatee-backend.onrender.com/api/admin/analytics/activity",
                         {
                             headers: {
                                 Authorization:

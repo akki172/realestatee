@@ -19,7 +19,7 @@ function SellerPropertyComments() {
         try {
 
             const response = await axios.get(
-                `http://localhost:8080/api/comments/seller/${sellerId}`,
+                `https://realestatee-backend.onrender.com/api/comments/seller/${sellerId}`,
                 {
                     headers: {
                         Authorization:
@@ -87,7 +87,7 @@ function SellerPropertyComments() {
 
 
             await axios.put(
-                `http://localhost:8080/api/comments/${commentId}/reply?sellerId=${sellerId}`,
+                `https://realestatee-backend.onrender.com/api/comments/${commentId}/reply?sellerId=${sellerId}`,
                 reply,
                 {
                     headers: {

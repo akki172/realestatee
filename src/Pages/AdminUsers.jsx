@@ -41,7 +41,7 @@ function AdminUsers() {
 
 
             const response = await axios.get(
-                "http://localhost:8080/api/admin/users",
+                "https://realestatee-backend.onrender.com/api/admin/users",
                 {
                     headers: {
                         Authorization:
@@ -93,7 +93,7 @@ function AdminUsers() {
 
 
             await axios.put(
-                `http://localhost:8080/api/admin/users/${id}/activate`,
+                `https://realestatee-backend.onrender.com/api/admin/users/${id}/activate`,
                 {},
                 {
                     headers: {
@@ -153,7 +153,7 @@ function AdminUsers() {
 
 
             await axios.put(
-                `http://localhost:8080/api/admin/users/${id}/deactivate`,
+                `https://realestatee-backend.onrender.com/api/admin/users/${id}/deactivate`,
                 {},
                 {
                     headers: {
@@ -213,7 +213,7 @@ function AdminUsers() {
 
 
             await axios.delete(
-                `http://localhost:8080/api/admin/users/${id}`,
+                `https://realestatee-backend.onrender.com/api/admin/users/${id}`,
                 {
                     headers: {
                         Authorization:

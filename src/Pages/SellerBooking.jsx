@@ -16,7 +16,7 @@ function SellerBookings() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:8080/api/payments/seller/bookings",
+        "https://realestatee-backend.onrender.com/api/payments/seller/bookings",
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setBookings(response.data);
@@ -32,7 +32,7 @@ function SellerBookings() {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:8080/api/property/${propertyId}/status`,
+        `https://realestatee-backend.onrender.com/api/property/${propertyId}/status`,
         null,
         { params: { status: "SOLD" }, headers: { Authorization: `Bearer ${token}` } }
       );

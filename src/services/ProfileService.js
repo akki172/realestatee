@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/profile";
+const API_URL = "https://realestatee-backend.onrender.com/api/profile";
 
 
 export const getProfile = (userId) => {

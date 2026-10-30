@@ -51,7 +51,7 @@ function PropertyDetails() {
 
 
             const response = await axios.get(
-                `http://localhost:8080/api/property/${id}`,
+                `https://realestatee-backend.onrender.com/api/property/${id}`,
                 {
                     headers: {
                         Authorization:

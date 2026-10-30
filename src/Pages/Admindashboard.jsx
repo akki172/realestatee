@@ -61,7 +61,7 @@ function AdminDashboard() {
 
 
             const response = await axios.get(
-                "http://localhost:8080/api/admin/dashboard",
+                "https://realestatee-backend.onrender.com/api/admin/dashboard",
                 {
                     headers: {
                         Authorization:

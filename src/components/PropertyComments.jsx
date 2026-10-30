@@ -19,7 +19,7 @@ function PropertyComments({ propertyId }) {
         try {
 
             const response = await axios.get(
-                `http://localhost:8080/api/comments/property/${propertyId}`,
+                `https://realestatee-backend.onrender.com/api/comments/property/${propertyId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -79,7 +79,7 @@ function PropertyComments({ propertyId }) {
             setSubmitting(true);
 
             await axios.post(
-                "http://localhost:8080/api/comments",
+                "https://realestatee-backend.onrender.com/api/comments",
                 {
                     propertyId: Number(propertyId),
                     userId: Number(userId),

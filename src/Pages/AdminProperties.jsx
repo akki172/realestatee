@@ -37,7 +37,7 @@ function AdminProperties() {
 
 
             const response = await axios.get(
-                "http://localhost:8080/api/admin/properties",
+                "https://realestatee-backend.onrender.com/api/admin/properties",
                 {
                     headers: {
                         Authorization:
@@ -96,7 +96,7 @@ function AdminProperties() {
 
 
             await axios.delete(
-                `http://localhost:8080/api/admin/properties/${propertyId}`,
+                `https://realestatee-backend.onrender.com/api/admin/properties/${propertyId}`,
                 {
                     headers: {
                         Authorization:
@@ -158,7 +158,7 @@ function AdminProperties() {
 
 
             await axios.put(
-                `http://localhost:8080/api/admin/properties/${propertyId}/verify`,
+                `https://realestatee-backend.onrender.com/api/admin/properties/${propertyId}/verify`,
                 {},
                 {
                     headers: {
@@ -225,7 +225,7 @@ function AdminProperties() {
 
 
             await axios.put(
-                `http://localhost:8080/api/admin/properties/${propertyId}/unverify`,
+                `https://realestatee-backend.onrender.com/api/admin/properties/${propertyId}/unverify`,
                 {},
                 {
                     headers: {

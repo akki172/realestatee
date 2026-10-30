@@ -19,7 +19,7 @@ function PropertyReviews({ propertyId }) {
             const token = localStorage.getItem("token");
 
 const response = await axios.get(
-    `http://localhost:8080/api/reviews/property/${propertyId}`,
+    `https://realestatee-backend.onrender.com/api/reviews/property/${propertyId}`,
     {
         headers: {
             Authorization: `Bearer ${token}`
@@ -90,7 +90,7 @@ if (!token || !userId) {
 }
 
 await axios.post(
-    "http://localhost:8080/api/reviews",
+    "https://realestatee-backend.onrender.com/api/reviews",
     {
         propertyId: Number(propertyId),
         userId: Number(userId),

@@ -29,7 +29,7 @@ function AdminUserDetails() {
             }
 
             const response = await axios.get(
-                `http://localhost:8080/api/admin/users/${id}`,
+                `https://realestatee-backend.onrender.com/api/admin/users/${id}`,
                 {
                     headers: {
                         Authorization:

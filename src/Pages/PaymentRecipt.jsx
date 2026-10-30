@@ -29,7 +29,7 @@ function PaymentReceipt() {
             }
 
             const response = await axios.get(
-                `http://localhost:8080/api/payments/${paymentId}/receipt`,
+                `https://realestatee-backend.onrender.com/api/payments/${paymentId}/receipt`,
                 {
                     headers: {
                         Authorization:
@@ -323,7 +323,7 @@ function PaymentReceipt() {
             localStorage.getItem("token");
 
         const response = await axios.get(
-            `http://localhost:8080/api/payments/${paymentId}/receipt/pdf`,
+            `https://realestatee-backend.onrender.com/api/payments/${paymentId}/receipt/pdf`,
             {
                 headers: {
                     Authorization:

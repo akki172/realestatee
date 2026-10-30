@@ -74,7 +74,7 @@ function AIAssistant() {
 
             const response = await axios.post(
 
-                "http://localhost:8080/api/ai/chat",
+                "https://realestatee-backend.onrender.com/api/ai/chat",
 
                 {
                     message: userMessage,

@@ -42,7 +42,7 @@ function SellerProfile() {
             // =====================================
 
             const sellerResponse = await axios.get(
-                `http://localhost:8080/api/seller-profile/${sellerId}`
+                `https://realestatee-backend.onrender.com/api/seller-profile/${sellerId}`
             );
 
             console.log(
@@ -58,7 +58,7 @@ function SellerProfile() {
             // =====================================
 
             const propertyResponse = await axios.get(
-                `http://localhost:8080/api/property/seller/${sellerId}`
+                `https://realestatee-backend.onrender.com/api/property/seller/${sellerId}`
             );
 
             console.log(

@@ -51,7 +51,7 @@ function ScheduleVisit() {
             setLoading(true);
 
             const response = await axios.post(
-                "http://localhost:8080/api/visit/book",
+                "https://realestatee-backend.onrender.com/api/visit/book",
                 {
                     buyerId: userId,
                     propertyId: property.id,

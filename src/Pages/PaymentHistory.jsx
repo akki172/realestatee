@@ -27,7 +27,7 @@ function PaymentHistory() {
             }
 
             const response = await axios.get(
-                "http://localhost:8080/api/payments/my",
+                "https://realestatee-backend.onrender.com/api/payments/my",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

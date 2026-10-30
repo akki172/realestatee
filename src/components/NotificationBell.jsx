@@ -27,7 +27,7 @@ function NotificationBell() {
         try {
 
             const response = await axios.get(
-                `http://localhost:8080/api/notifications/${userId}`,
+                `https://realestatee-backend.onrender.com/api/notifications/${userId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -60,7 +60,7 @@ function NotificationBell() {
         try {
 
             const response = await axios.get(
-                `http://localhost:8080/api/notifications/${userId}/unread-count`,
+                `https://realestatee-backend.onrender.com/api/notifications/${userId}/unread-count`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -101,7 +101,7 @@ function NotificationBell() {
         try {
 
             await axios.put(
-                `http://localhost:8080/api/notifications/${notification.id}/read`,
+                `https://realestatee-backend.onrender.com/api/notifications/${notification.id}/read`,
                 {},
                 {
                     headers: {
@@ -183,7 +183,7 @@ function NotificationBell() {
         try {
 
             await axios.put(
-                `http://localhost:8080/api/notifications/${userId}/read-all`,
+                `https://realestatee-backend.onrender.com/api/notifications/${userId}/read-all`,
                 {},
                 {
                     headers: {

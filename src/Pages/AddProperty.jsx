@@ -94,7 +94,7 @@ function AddProperty() {
       };
 
       const response = await axios.post(
-        "http://localhost:8080/api/property/add",
+        "https://realestatee-backend.onrender.com/api/property/add",
         propertyData,
         { headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } }
       );

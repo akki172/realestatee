@@ -38,7 +38,7 @@ function PaymentResult() {
             }
 
             const response = await axios.get(
-                `http://localhost:8080/api/payments/verify/${orderId}`,
+                `https://realestatee-backend.onrender.com/api/payments/verify/${orderId}`,
                 {
                     headers: {
                         Authorization:

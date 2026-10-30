@@ -54,7 +54,7 @@ function PropertyList() {
             setError("");
 
            const response = await axios.get(
-    "http://localhost:8080/api/property/all",
+    "https://realestatee-backend.onrender.com/api/property/all",
     getHeaders()
 );
 
@@ -189,7 +189,7 @@ setProperties(response.data);
 
             const response = await axios.get(
 
-                `http://localhost:8080/api/property/search?${params.toString()}`,
+                `https://realestatee-backend.onrender.com/api/property/search?${params.toString()}`,
 
                 getHeaders()
 

@@ -40,7 +40,7 @@ function PropertyMap({ latitude, longitude, title }) {
                 localStorage.getItem("token");
 
             const response = await axios.get(
-                "http://localhost:8080/api/property/nearby",
+                "https://realestatee-backend.onrender.com/api/property/nearby",
                 {
                     params: {
                         latitude: lat,

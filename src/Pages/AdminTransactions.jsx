@@ -18,7 +18,7 @@ const AdminTransactions = () => {
                     localStorage.getItem("token");
 
                 const response = await axios.get(
-                    "http://localhost:8080/api/admin/transactions",
+                    "https://realestatee-backend.onrender.com/api/admin/transactions",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`

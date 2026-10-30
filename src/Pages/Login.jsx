@@ -119,7 +119,7 @@ export default function Login() {
     const handleGoogleLogin = () => {
 
         window.location.href =
-            "http://localhost:8080/oauth2/authorization/google";
+            "https://realestatee-backend.onrender.com/oauth2/authorization/google";
 
     };
 
